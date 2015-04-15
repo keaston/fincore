@@ -1,0 +1,16 @@
+fincore
+-------
+
+fincore is a quick and dirty utility to show how much of a file is resident in
+the page cache.  It was developed on Linux but may work on other kernels that
+provide the mincore() system call.
+
+Usage
+-----
+
+fincore [-b] <filename> [filename...]
+
+By default it will show the percentage of the file's pages that are resident.
+If the -b switch is supplied, it will instead show the number of bytes (if the
+file size is not a multiple of the system page size, this could be greater
+than the file size).
